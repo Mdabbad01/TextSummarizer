@@ -1,3 +1,2 @@
-x = 5
-name = "Abbad"
-print(x, name)
+import sys
+print(sys.executable)

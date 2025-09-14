@@ -1,1 +1,7 @@
-key: "value"
+TrainingArguments:
+  num_train_epochs: 1
+  max_steps: 200
+  warmup_steps: 50
+  logging_steps: 20
+  save_steps: 5000
+  gradient_accumulation_steps: 2

@@ -5,3 +5,19 @@ data_ingestion:
   source_URL: https://github.com/krishnaik06/datasets/raw/main/summarizer-data.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  train_path: artifacts/data_ingestion/samsum-train.csv
+  test_path: artifacts/data_ingestion/samsum-test.csv
+  val_path: artifacts/data_ingestion/samsum-validation.csv
+  model:
+  name: google/pegasus-cnn_dailymail
+
+training:
+  model_name: google/pegasus-cnn_dailymail
+  tokenizer_name: google/pegasus-cnn_dailymail
+  output_dir: artifacts/model
+  num_train_epochs: 1
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 2
