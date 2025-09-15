@@ -15,9 +15,11 @@ data_transformation:
   name: google/pegasus-cnn_dailymail
 
 training:
-  model_name: google/pegasus-cnn_dailymail
-  tokenizer_name: google/pegasus-cnn_dailymail
+  model_name: t5-small
+  tokenizer_name: t5-small
   output_dir: artifacts/model
   num_train_epochs: 1
-  per_device_train_batch_size: 4
-  per_device_eval_batch_size: 2
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+
+

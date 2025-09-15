@@ -1708,3 +1708,628 @@ Traceback (most recent call last):
     _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 4194304 bytes.
+[2025-09-15 19:20:44,835:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-15 19:20:44,835:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-15 19:20:44,855:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:20:44,871:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:20:44,880:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:20:44,883:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-15 19:20:45,170:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-15 19:20:45,172:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-15 19:20:45,172:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 19:20:45,172:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-15 19:20:45,177:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:20:45,179:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:20:45,180:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:20:45,180:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-15 19:20:45,558:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-15 19:20:45,609:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-15 19:20:45,678:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-15 19:20:46,298:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-15 19:20:46,303:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 19:20:46,309:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 19:20:46,311:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 19:20:46,317:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:20:46,322:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:20:46,323:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:21:18,732:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-15 19:21:18,735:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-15 19:21:18,737:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:21:18,737:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:21:18,737:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:21:18,737:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-15 19:21:18,986:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-15 19:21:18,988:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-15 19:21:18,989:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 19:21:18,989:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-15 19:21:18,994:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:21:18,995:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:21:18,998:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:21:19,000:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-15 19:21:19,419:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-15 19:21:19,472:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-15 19:21:19,546:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-15 19:21:19,975:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-15 19:21:19,980:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 19:21:19,980:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 19:21:19,981:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 19:21:19,987:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:21:19,991:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:21:19,992:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:22:35,735:  WARNING:fingerprint:Parameter 'function'=<bound method ModelTrainer.tokenize_function of <src.summarizer.components.model_trainer.ModelTrainer object at 0x0000017B068C4B30>> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.]
+[2025-09-15 19:23:34,476:  ERROR:stage_3_model_trainer_pipeline:Error in Model Trainer Stage: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 4194304 bytes.]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 75, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2672, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 4009, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 4099, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 1472, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 1298, in forward
+    decoder_outputs = self.decoder(
+                      ^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 1122, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 427, in forward
+    hidden_states, cross_attn_weights = self.encoder_attn(
+                                        ^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 255, in forward
+    attn_output, attn_weights = attention_interface(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\integrations\sdpa_attention.py", line 83, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 4194304 bytes.
+[2025-09-15 19:23:35,019:  ERROR:main:Error in Model Trainer Stage: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 4194304 bytes.]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 27, in initiate_model_trainer
+    raise e
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 75, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2672, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 4009, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 4099, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 1472, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 1298, in forward
+    decoder_outputs = self.decoder(
+                      ^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 1122, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 427, in forward
+    hidden_states, cross_attn_weights = self.encoder_attn(
+                                        ^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\models\pegasus\modeling_pegasus.py", line 255, in forward
+    attn_output, attn_weights = attention_interface(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\integrations\sdpa_attention.py", line 83, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 4194304 bytes.
+[2025-09-15 19:49:53,214:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-15 19:49:53,216:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-15 19:49:53,221:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:49:53,223:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:49:53,226:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:49:53,230:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-15 19:49:53,464:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-15 19:49:53,465:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-15 19:49:53,465:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 19:49:53,465:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-15 19:49:53,469:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:49:53,472:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:49:53,473:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:49:53,474:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-15 19:49:53,794:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-15 19:49:53,840:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-15 19:49:53,897:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-15 19:49:54,273:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-15 19:49:54,276:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 19:49:54,276:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 19:49:54,276:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 19:49:54,283:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 19:49:54,288:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 19:49:54,289:  INFO:common:Created directory at: artifacts]
+[2025-09-15 19:51:21,217:  WARNING:fingerprint:Parameter 'function'=<bound method ModelTrainer.tokenize_function of <src.summarizer.components.model_trainer.ModelTrainer object at 0x00000263F12829C0>> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.]
+[2025-09-15 19:52:49,561:  ERROR:stage_3_model_trainer_pipeline:Error in Model Trainer Stage: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 5.98 GiB is allocated by PyTorch, and 105.33 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 93, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2738, in _inner_training_loop
+    self.optimizer.step()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\optimizer.py", line 166, in step
+    self.scaler.step(self.optimizer, closure)
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 461, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 356, in _maybe_opt_step
+    retval = optimizer.step(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\optimizer.py", line 211, in patched_step
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\lr_scheduler.py", line 124, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\optimizer.py", line 485, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\optimizer.py", line 79, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\adam.py", line 236, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\adam.py", line 180, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+                          ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 5.98 GiB is allocated by PyTorch, and 105.33 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2025-09-15 19:52:49,641:  ERROR:main:Error in Model Trainer Stage: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 5.98 GiB is allocated by PyTorch, and 105.33 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 27, in initiate_model_trainer
+    raise e
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 93, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2738, in _inner_training_loop
+    self.optimizer.step()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\optimizer.py", line 166, in step
+    self.scaler.step(self.optimizer, closure)
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 461, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 356, in _maybe_opt_step
+    retval = optimizer.step(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\optimizer.py", line 211, in patched_step
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\lr_scheduler.py", line 124, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\optimizer.py", line 485, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\optimizer.py", line 79, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\adam.py", line 236, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\adam.py", line 180, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+                          ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 5.98 GiB is allocated by PyTorch, and 105.33 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2025-09-15 20:26:56,973:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-15 20:26:56,989:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-15 20:26:56,993:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:26:56,997:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:26:56,998:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:26:56,998:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-15 20:26:57,218:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-15 20:26:57,218:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-15 20:26:57,219:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 20:26:57,219:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-15 20:26:57,221:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:26:57,223:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:26:57,225:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:26:57,225:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-15 20:26:57,563:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-15 20:26:57,621:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-15 20:26:57,691:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-15 20:26:58,099:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-15 20:26:58,113:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 20:26:58,113:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 20:26:58,113:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 20:26:58,120:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:26:58,123:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:26:58,123:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:29:27,992:  ERROR:stage_3_model_trainer_pipeline:Error in Model Trainer Stage: Attempting to unscale FP16 gradients.]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 108, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2713, in _inner_training_loop
+    _grad_norm = self.accelerator.clip_grad_norm_(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\accelerator.py", line 2890, in clip_grad_norm_
+    self.unscale_gradients()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\accelerator.py", line 2828, in unscale_gradients
+    self.scaler.unscale_(opt)
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 342, in unscale_
+    optimizer_state["found_inf_per_device"] = self._unscale_grads_(
+                                              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 264, in _unscale_grads_
+    raise ValueError("Attempting to unscale FP16 gradients.")
+ValueError: Attempting to unscale FP16 gradients.
+[2025-09-15 20:29:28,008:  ERROR:main:Error in Model Trainer Stage: Attempting to unscale FP16 gradients.]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 27, in initiate_model_trainer
+    raise e
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 108, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2713, in _inner_training_loop
+    _grad_norm = self.accelerator.clip_grad_norm_(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\accelerator.py", line 2890, in clip_grad_norm_
+    self.unscale_gradients()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\accelerator.py", line 2828, in unscale_gradients
+    self.scaler.unscale_(opt)
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 342, in unscale_
+    optimizer_state["found_inf_per_device"] = self._unscale_grads_(
+                                              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 264, in _unscale_grads_
+    raise ValueError("Attempting to unscale FP16 gradients.")
+ValueError: Attempting to unscale FP16 gradients.
+[2025-09-15 20:36:22,296:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-15 20:36:22,296:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-15 20:36:22,302:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:36:22,302:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:36:22,302:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:36:22,307:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-15 20:36:22,548:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-15 20:36:22,548:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-15 20:36:22,550:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 20:36:22,550:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-15 20:36:22,551:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:36:22,555:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:36:22,558:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:36:22,558:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-15 20:36:22,930:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-15 20:36:22,994:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-15 20:36:23,092:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-15 20:36:23,468:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-15 20:36:23,472:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 20:36:23,472:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 20:36:23,472:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 20:36:23,476:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:36:23,479:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:36:23,481:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:56:52,941:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-15 20:56:52,955:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-15 20:56:53,098:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:56:53,107:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:56:53,108:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:56:53,108:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-15 20:56:53,316:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-15 20:56:53,319:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-15 20:56:53,319:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 20:56:53,320:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-15 20:56:53,323:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:56:53,327:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:56:53,328:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:56:53,330:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-15 20:56:53,747:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-15 20:56:53,829:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-15 20:56:53,948:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-15 20:56:54,334:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-15 20:56:54,339:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 20:56:54,339:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 20:56:54,340:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 20:56:54,347:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 20:56:54,350:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 20:56:54,356:  INFO:common:Created directory at: artifacts]
+[2025-09-15 20:59:22,950:  ERROR:stage_3_model_trainer_pipeline:Error in Model Trainer Stage: Attempting to unscale FP16 gradients.]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 103, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2713, in _inner_training_loop
+    _grad_norm = self.accelerator.clip_grad_norm_(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\accelerator.py", line 2890, in clip_grad_norm_
+    self.unscale_gradients()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\accelerator.py", line 2828, in unscale_gradients
+    self.scaler.unscale_(opt)
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 342, in unscale_
+    optimizer_state["found_inf_per_device"] = self._unscale_grads_(
+                                              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 264, in _unscale_grads_
+    raise ValueError("Attempting to unscale FP16 gradients.")
+ValueError: Attempting to unscale FP16 gradients.
+[2025-09-15 20:59:22,963:  ERROR:main:Error in Model Trainer Stage: Attempting to unscale FP16 gradients.]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 27, in initiate_model_trainer
+    raise e
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 103, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2713, in _inner_training_loop
+    _grad_norm = self.accelerator.clip_grad_norm_(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\accelerator.py", line 2890, in clip_grad_norm_
+    self.unscale_gradients()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\accelerator.py", line 2828, in unscale_gradients
+    self.scaler.unscale_(opt)
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 342, in unscale_
+    optimizer_state["found_inf_per_device"] = self._unscale_grads_(
+                                              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\amp\grad_scaler.py", line 264, in _unscale_grads_
+    raise ValueError("Attempting to unscale FP16 gradients.")
+ValueError: Attempting to unscale FP16 gradients.
+[2025-09-15 21:07:08,374:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-15 21:07:08,376:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-15 21:07:08,380:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 21:07:08,383:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 21:07:08,384:  INFO:common:Created directory at: artifacts]
+[2025-09-15 21:07:08,385:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-15 21:07:08,613:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-15 21:07:08,613:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-15 21:07:08,614:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 21:07:08,614:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-15 21:07:08,618:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 21:07:08,620:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 21:07:08,621:  INFO:common:Created directory at: artifacts]
+[2025-09-15 21:07:08,622:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-15 21:07:09,032:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-15 21:07:09,106:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-15 21:07:09,199:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-15 21:07:09,589:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-15 21:07:09,598:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 21:07:09,598:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 21:07:09,598:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 21:07:09,604:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 21:07:09,608:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 21:07:09,609:  INFO:common:Created directory at: artifacts]
+[2025-09-15 21:08:23,150:  WARNING:fingerprint:Parameter 'function'=<bound method ModelTrainer.tokenize_function of <src.summarizer.components.model_trainer.ModelTrainer object at 0x0000021E9BE829C0>> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.]
+[2025-09-15 21:09:18,154:  ERROR:stage_3_model_trainer_pipeline:Error in Model Trainer Stage: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 6.07 GiB is allocated by PyTorch, and 15.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 101, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2738, in _inner_training_loop
+    self.optimizer.step()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\optimizer.py", line 179, in step
+    self.optimizer.step(closure)
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\lr_scheduler.py", line 124, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\optimizer.py", line 485, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\optimizer.py", line 79, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\adam.py", line 236, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\adam.py", line 180, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+                          ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 6.07 GiB is allocated by PyTorch, and 15.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2025-09-15 21:09:18,176:  ERROR:main:Error in Model Trainer Stage: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 6.07 GiB is allocated by PyTorch, and 15.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)]
+Traceback (most recent call last):
+  File "C:\projects\Summarizer\main.py", line 36, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 27, in initiate_model_trainer
+    raise e
+  File "C:\projects\Summarizer\src\summarizer\pipeline\stage_3_model_trainer_pipeline.py", line 22, in initiate_model_trainer
+    model_trainer.train(train_path=train_path, eval_path=eval_path)
+  File "C:\projects\Summarizer\src\summarizer\components\model_trainer.py", line 101, in train
+    trainer.train()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\transformers\trainer.py", line 2738, in _inner_training_loop
+    self.optimizer.step()
+  File "C:\projects\Summarizer\venv\Lib\site-packages\accelerate\optimizer.py", line 179, in step
+    self.optimizer.step(closure)
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\lr_scheduler.py", line 124, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\optimizer.py", line 485, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\optimizer.py", line 79, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\adam.py", line 236, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\projects\Summarizer\venv\Lib\site-packages\torch\optim\adam.py", line 180, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+                          ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 4.00 GiB of which 0 bytes is free. Of the allocated memory 6.07 GiB is allocated by PyTorch, and 15.35 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2025-09-15 21:15:10,524:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-15 21:15:10,525:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-15 21:15:10,540:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 21:15:10,541:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 21:15:10,541:  INFO:common:Created directory at: artifacts]
+[2025-09-15 21:15:10,543:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-15 21:15:10,700:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-15 21:15:10,701:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-15 21:15:10,701:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 21:15:10,701:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-15 21:15:10,703:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 21:15:10,704:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 21:15:10,705:  INFO:common:Created directory at: artifacts]
+[2025-09-15 21:15:10,705:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-15 21:15:10,914:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-15 21:15:10,943:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-15 21:15:10,965:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-15 21:15:11,136:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-15 21:15:11,138:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-15 21:15:11,138:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 21:15:11,138:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-15 21:15:11,140:  INFO:common:yaml file:C:\projects\Summarizer\config\config.yaml loaded successfully]
+[2025-09-15 21:15:11,140:  INFO:common:yaml file:C:\projects\Summarizer\params.yaml loaded successfully]
+[2025-09-15 21:15:11,140:  INFO:common:Created directory at: artifacts]
+[2025-09-15 21:15:12,929:  WARNING:file_download:Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-09-15 22:04:13,405:  INFO:main:>>>>>> Stage: Model Trainer Stage completed <<<<<<
+
+x==========x]
