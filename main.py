@@ -38,3 +38,21 @@ if __name__ == "__main__":
     except Exception as e:
         logger.exception(f"Error in {STAGE_NAME}: {e}")
         raise e
+    
+    # -------------------- Stage 4: Model Evaluation --------------------
+    
+      # -------------------- Stage 4: Model Evaluation --------------------STAGE_NAME = "Model Evaluation Stage"
+STAGE_NAME = "Model Evaluation Stage"
+try:
+    logger.info(f">>>>>> Stage: {STAGE_NAME} started <<<<<<")
+    from src.summarizer.pipeline.stage_4_model_evaluation import ModelEvaluationTrainingPipeline
+
+    evaluation_pipeline = ModelEvaluationTrainingPipeline()
+    evaluation_pipeline.initiate_model_evaluation(
+        eval_path="artifacts/data_transformation/val.csv"
+    )
+
+    logger.info(f">>>>>> Stage: {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(f"Error in {STAGE_NAME}: {e}")
+    raise e
