@@ -2835,3 +2835,42 @@ x==========x]
 [2025-09-23 06:58:46,188:  INFO:main:>>>>>> Stage: Model Evaluation Stage completed <<<<<<
 
 x==========x]
+[2025-09-27 17:38:14,034:  INFO:main:>>>>>> Stage: Data Ingestion Stage started <<<<<<]
+[2025-09-27 17:38:14,035:  INFO:stage_1_data_ingestion_pipeline:Starting Data Ingestion...]
+[2025-09-27 17:38:14,047:  INFO:common:yaml file:C:\Users\Md Abbad\Downloads\TextSummarizer-main\TextSummarizer-main\config\config.yaml loaded successfully]
+[2025-09-27 17:38:14,065:  INFO:common:yaml file:C:\Users\Md Abbad\Downloads\TextSummarizer-main\TextSummarizer-main\params.yaml loaded successfully]
+[2025-09-27 17:38:14,066:  INFO:common:Created directory at: artifacts]
+[2025-09-27 17:38:14,067:  INFO:data_ingestion:File already exists at artifacts/data_ingestion/data.zip]
+[2025-09-27 17:38:14,211:  INFO:data_ingestion:Extracted zip file to artifacts/data_ingestion]
+[2025-09-27 17:38:14,211:  INFO:stage_1_data_ingestion_pipeline:Data Ingestion completed successfully.]
+[2025-09-27 17:38:14,211:  INFO:main:>>>>>> Stage: Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-27 17:38:14,211:  INFO:main:>>>>>> Stage: Data Transformation Stage started <<<<<<]
+[2025-09-27 17:38:14,214:  INFO:common:yaml file:C:\Users\Md Abbad\Downloads\TextSummarizer-main\TextSummarizer-main\config\config.yaml loaded successfully]
+[2025-09-27 17:38:14,215:  INFO:common:yaml file:C:\Users\Md Abbad\Downloads\TextSummarizer-main\TextSummarizer-main\params.yaml loaded successfully]
+[2025-09-27 17:38:14,215:  INFO:common:Created directory at: artifacts]
+[2025-09-27 17:38:14,216:  INFO:data_transformation:Reading training data from: artifacts/data_ingestion/samsum-train.csv]
+[2025-09-27 17:38:14,436:  INFO:data_transformation:Reading test data from: artifacts/data_ingestion/samsum-test.csv]
+[2025-09-27 17:38:14,463:  INFO:data_transformation:Reading validation data from: artifacts/data_ingestion/samsum-validation.csv]
+[2025-09-27 17:38:14,493:  INFO:data_transformation:Train shape: (14732, 3), Test shape: (819, 3), Val shape: (818, 3)]
+[2025-09-27 17:38:14,703:  INFO:data_transformation:Data Transformation completed. Train, Test, Val saved.]
+[2025-09-27 17:38:14,707:  INFO:main:>>>>>> Stage: Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-09-27 17:38:14,707:  INFO:main:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-27 17:38:14,707:  INFO:stage_3_model_trainer_pipeline:>>>>>> Stage: Model Trainer Stage started <<<<<<]
+[2025-09-27 17:38:14,709:  INFO:common:yaml file:C:\Users\Md Abbad\Downloads\TextSummarizer-main\TextSummarizer-main\config\config.yaml loaded successfully]
+[2025-09-27 17:38:14,710:  INFO:common:yaml file:C:\Users\Md Abbad\Downloads\TextSummarizer-main\TextSummarizer-main\params.yaml loaded successfully]
+[2025-09-27 17:38:14,711:  INFO:common:Created directory at: artifacts]
+[2025-09-27 17:38:16,507:  INFO:main:>>>>>> Stage: Model Trainer Stage completed <<<<<<
+
+x==========x]
+[2025-09-27 17:38:16,508:  INFO:main:>>>>>> Stage: Model Evaluation Stage started <<<<<<]
+[2025-09-27 17:38:16,727:  INFO:common:yaml file:C:\Users\Md Abbad\Downloads\TextSummarizer-main\TextSummarizer-main\config\config.yaml loaded successfully]
+[2025-09-27 17:38:16,727:  INFO:common:yaml file:C:\Users\Md Abbad\Downloads\TextSummarizer-main\TextSummarizer-main\params.yaml loaded successfully]
+[2025-09-27 17:38:16,727:  INFO:common:Created directory at: artifacts]
+[2025-09-27 17:44:31,313:  INFO:rouge_scorer:Using default tokenizer.]
+[2025-09-27 17:44:31,818:  INFO:main:>>>>>> Stage: Model Evaluation Stage completed <<<<<<
+
+x==========x]
